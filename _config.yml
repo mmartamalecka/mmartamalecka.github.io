@@ -22,7 +22,7 @@ title: Marta Małecka
 long-title: Marta Małecka
 email: mmartamaleckan@gmail.com
 description: "Portfolio"
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/portfolio" # the subpath of your site, e.g. /blog
 url: "https://himatt.com" # the base hostname & protocol for your site
 timezone: Europe/Warsaw
 year: 2024
