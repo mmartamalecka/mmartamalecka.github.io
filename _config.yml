@@ -29,16 +29,6 @@ year: 2024
 start-year: 2010
 sitemap: true
 
-# Social networks
-social-username:
-  twitter: "@mattgreydesign"
-  linkedin: "himatt"
-  github: "mattgreydesign"
-  medium: "@mattgreydesign"
-  pinterest: "mattgreydesign"
-  instagram: "mattgreydesign"
-  flickr: "mattgreydesign"
-  spotify: "mattgreydesign"
 
 # Content
 image_serve_path: "/images" # <img src="{{ site.image_serve_path }}/projects/img.jpg">

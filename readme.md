@@ -2,23 +2,11 @@
 
 ## Setup
 
-MARTA ODPAL TO:
-
 ``
 
-bundle exec jekyll serve -H tygryz.local --livereload
+bundle exec jekyll serve -H --livereload
 
 ``
-
-dupcia
-pies
-doopsko
-
-
-
-
-
-
 
 This site runs on Jekyll, an opensource static site generating platform.
 
@@ -56,9 +44,6 @@ This site runs on Jekyll, an opensource static site generating platform.
 - Static website
 - Optimised for efficient [PageSpeed Insights benchmarks](https://developers.google.com/speed/pagespeed/insights/?url=himatt.com) (still more to do in this space)
 - No Jekyll plugin dependancies (previously used Bourbon and Neat, now uses CSS Grid and CSS Custom properties)
-- Continuously deployed using Netlify
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/01ca9c4b-b99d-411f-9003-9fad58ccbcf3/deploy-status)](https://app.netlify.com/sites/mattgrey/deploys)
 
 ## Licenses
 
