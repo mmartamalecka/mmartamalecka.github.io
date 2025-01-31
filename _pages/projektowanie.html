@@ -8,24 +8,34 @@ priority: 0.9
 
 
 <div class="projects-intro-wrapper">
-    <p class="projects-intro type-level-1">ASDF</p>
-  </div>
-  
-  
+  {%- comment -%} <p class="projects-intro type-level-1">ASDF</p> {%- endcomment -%}
+</div>
+
+
 <div class="projects">
-{% for project in site.projects reversed limit:include.limit %}
+  {% assign filtered_projects = site.projects | where: "page", "design" | sort: "priority" %}
+  {% for project in filtered_projects limit:include.limit %}
   <article class="project-listing">
     <div class="thumbnail-wrapper">
       <a href="{{ project.url | prepend: site.baseurl }}">
         <div class="thumbnail-description-wrapper">
-          <img src="{{ project.thumbnail | prepend: site.image_serve_path }}" alt="{{ project.title }}" width="600" height="450">
+          {% if project.thumbnail contains '.webm' or project.thumbnail contains '.mp4' %}
+          <!-- <div class="image-wrapper"> -->
+            <video src="{{ project.thumbnail | prepend: site.image_serve_path }}" alt="{{ project.title }}" width="400" height="400" playsinline autoplay loop muted></video>
+          <!-- </div> -->
+          {% else %}
+            <img src="{{ project.thumbnail | prepend: site.image_serve_path }}" alt="{{ project.title }}" width="600" height="600">
+          {% endif %}
           <p class="thumbnail-description">
-            <span>{{ project.description }}</span>
+            <span><strong>{{ project.title }}</strong> </span>
+            <span style="font-size: 0.7em; padding-top: 0.5rem;">{{ project.description }}</span>
+
+            <span style="font-size:0.7em; padding-top: 2rem;">{{ project.tags | join: ' • '| replace: '+',' ' }}</span>
           </p>
         </div>
-        <h3 aria-hidden="true">{{ project.title }}</h3>
+        {%- comment -%} <h3 aria-hidden="true">{{ project.title }}</h3> {%- endcomment -%}
       </a>
     </div>
   </article>
-{% endfor %}
+  {% endfor %}
 </div>

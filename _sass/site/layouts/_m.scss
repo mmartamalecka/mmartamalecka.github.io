@@ -1,12 +1,38 @@
 .m-logo {
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    img {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
-    }
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // position: sticky;
+  top: 0;
+  z-index: 100;
+  padding-top: rem(0px);
+
+  img {
+    // max-height: 100%;
+    // max-width: 100%;
+    object-fit: scale-down;
+    // padding-top: rem(64px);
   }
+}
+
+.m-title {
+  text-align: center;
+  padding-top: rem(25px);
+  padding-bottom: rem(64px);
+  color: var(--color-heading);
+  line-height: 1.2;
+
+  .name {
+    font-size: rem(20px);
+    font-weight: bold;
+    margin-bottom: rem(6px);
+  }
+
+  .caption {
+    font-size: rem(14px);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+}

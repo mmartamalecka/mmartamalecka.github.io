@@ -1,8 +1,24 @@
-# himatt.com
 
-Personal portfolio made with [Jekyll](https://jekyllrb.com/), deployed via [Netlify](https://netlify.com/)
 
 ## Setup
+
+MARTA ODPAL TO:
+
+``
+
+bundle exec jekyll serve -H tygryz.local --livereload
+
+``
+
+dupcia
+pies
+doopsko
+
+
+
+
+
+
 
 This site runs on Jekyll, an opensource static site generating platform.
 

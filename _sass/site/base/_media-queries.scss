@@ -2,7 +2,8 @@
   $phablet-size: 480px;
   $tablet-size: 768px;
   $desktop-size: 1260px;
-  $largedesktop-size: 1512px;
+  // $largedesktop-size: 1512px;
+  $largedesktop-size: 2100px;
   $default-feature: min-width;
 
   @if $device-size == cat {

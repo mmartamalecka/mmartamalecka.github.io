@@ -5,6 +5,10 @@
   @extend .grid-container;
 
   .image-wrapper,
+  .video-wrapper,
+  .text-wrapper,
+  .image-gallery,
+  .image-comparison,
   .additional-content {
     @include grid-column(6);
 
@@ -37,7 +41,11 @@
 .layout-2col {
   @extend .grid-container;
 
-  .image-wrapper {
+  .image-wrapper,
+  .video-wrapper,
+  .image-gallery,
+  .text-wrapper,
+  .image-comparison {
     @include grid-column(6);
 
     @include grid-media(tablet) {

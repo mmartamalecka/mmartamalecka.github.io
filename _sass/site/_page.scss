@@ -12,6 +12,8 @@ html {
   box-sizing: border-box;
   background-color: var(--color-background);
   height: 100%;
+  // max-width: 100%;
+
 }
 
 *, *:before, *:after {
@@ -27,6 +29,8 @@ img {
 }
 
 body {
+    // width: 100vw;
+
   &.prevent-scroll-mobile {
     overflow: hidden;
 
@@ -37,16 +41,16 @@ body {
 }
 
 .global-wrapper {
-  margin-top: 100px;
+  margin-top: rem(77px);
 }
 
 .main-content {
   min-height: calc(100vh - 268px);
-  padding-top: 1rem;
+  // padding-top: 1rem;
 
   @include grid-media(tablet) {
     min-height: calc(100vh - 248px);
-    padding-top: 2rem;
+    // padding-top: 2rem;
   }
   @include grid-media(desktop) {
     min-height: calc(100vh - 254px);

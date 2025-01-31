@@ -6,13 +6,13 @@
   --line-height-tiny: 1.2;
 
   --font-size-xsmall: #{rem(12px)};
-  --font-size-small: #{rem(14px)};
-  --font-size-normal: #{rem(16px)};
-  --font-size-large: #{rem(18px)};
-  --font-size-xlarge: #{rem(20px)};
+  --font-size-small: #{rem(10px)};
+  --font-size-normal: #{rem(12px)}; //body text biały
+  --font-size-large: #{rem(14px)}; 
+  --font-size-xlarge: #{rem(16px)};
   --font-size-xxlarge: #{rem(24px)};
   --font-size-xxlarge-2: #{rem(28px)};
-  --font-size-xxxlarge:#{rem(32px)};
+  --font-size-xxxlarge:#{rem(28px)};
   --font-size-xxxxlarge: #{rem(40px)};
   --font-size-xxxxxlarge: #{rem(56px)};
   --font-size-xxxxxxlarge: #{rem(72px)};
@@ -30,7 +30,7 @@
 
   --font-size-button: var(--font-size-large);
   --font-size-form-label: var(--font-size-xlarge);
-  --font-size-nav: var(--font-size-xlarge);
+  --font-size-nav: var(--font-size-normal);
 
   --font-letter-spacing-subtle: .06rem;
 
@@ -38,13 +38,14 @@
 
   --gutter: #{rem(24px)};
   --gutter-row: #{rem(24px)};
-  --page-margin: #{rem(32px)};
+  --page-margin: #{rem(16px)};
   --inner-padding: #{rem(16px)};
   --inner-padding-horizontal: #{rem(10px)};
 
   --color-primary: 255,255,255;
-  --color-secondary: 33,33,33;
-  --color-tertiary: 0, 0, 255;
+  --color-heading: #6B54F5;
+  --color-secondary: 0,0,0;
+  --color-tertiary: 0, 0, 0;
   --color-action: #65ff80;
 
   --color-highlight-rgb: var(--color-tertiary);
@@ -62,7 +63,7 @@
 
   --color-rgb-opacity-tint-light: .1;
   --color-rgb-opacity-tint-mid: .6;
-  --color-rgb-opacity-tint-dark: .85;
+  --color-rgb-opacity-tint-dark: .5;
 }
 
 @include grid-media(tablet) {
@@ -77,7 +78,8 @@
     --font-size-body-large: var(--font-size-xxlarge);
     --font-size-body-huge: var(--font-size-xxxlarge);
 
-    --page-margin: #{rem(64px)};
+    --page-margin: #{rem(144px)};
+    
   }
 }
 
@@ -91,13 +93,15 @@
 
     --gutter: #{rem(32px)};
     --gutter-row: #{rem(32px)};
+    --page-margin: #{rem(180px)};
+
   }
 }
 
 @include grid-media(largedesktop) {
   :root {
-    --font-size-root: 20px;
-    --page-margin: #{rem(128px)};
+    --font-size-root: 18px;
+    --page-margin: #{rem(500px)};
   }
 }
 

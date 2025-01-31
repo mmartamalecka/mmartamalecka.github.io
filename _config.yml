@@ -18,14 +18,14 @@ include:
   - _redirects
 
 # Site settings
-title: Matt Grey
-long-title: Matt Grey Design
-email: mattgreydesign@gmail.com
-description: "The selected portfolio of London based digital product designer Matt Grey"
+title: Marta Małecka
+long-title: Marta Małecka
+email: mmartamaleckan@gmail.com
+description: "Portfolio"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://himatt.com" # the base hostname & protocol for your site
-timezone: Europe/London
-year: 2021
+timezone: Europe/Warsaw
+year: 2024
 start-year: 2010
 sitemap: true
 
@@ -67,11 +67,13 @@ compress_html: # http://jch.penibelst.de/
 
 # Structure
 navigation:
-  - title: Landing
+  - title: HOME
     url: /
-  - title: Projektowanie graficzne
+  - title: DESIGN
     url: /projektowanie
-  - title: Contact
+  - title: ANIMATION & VIDEO
+    url: /video
+  - title: CONTACT
     url: /contact
 
 permalink: /:title/

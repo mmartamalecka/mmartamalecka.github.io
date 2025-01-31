@@ -1,15 +1,20 @@
 footer.main-footer {
   @extend .grid-container;
-  color: #fff;
-  padding-bottom: rem(32px);
-  padding-top: rem(32px);
-
+  color: #333;
+  padding-bottom: rem(8px);
+  padding-top: rem(8px);
+  font-size: rem(10px);
+  
+  
   @include grid-media(tablet) {
     padding-top: rem(64px);
   }
 
   .footer-license-wrapper {
     @include grid-column(6);
+    padding-top: rem(32px);
+    
+
 
     @include grid-media(tablet) {
       @include grid-column(10);
@@ -28,7 +33,7 @@ footer.main-footer {
 
   a.license {
     text-decoration: none;
-    color: var(--color-text);
+    color:#333;;
 
     &:hover {
       border-bottom: 1px dashed;
@@ -37,12 +42,12 @@ footer.main-footer {
 
   a.made-by {
     padding-bottom: 1em;
-    border-bottom: 1px solid var(--color-line);
+    border-bottom: 1px solid #333;;
     text-decoration: none;
     text-transform: uppercase;
     word-wrap: break-word;
     letter-spacing: 0.1rem;
-    color: var(--color-text);
+    // color: var(--color-text);
     font-size: .6rem;
 
     @include grid-media(tablet) {

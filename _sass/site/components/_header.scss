@@ -1,10 +1,17 @@
 .main-header {
   //Prevent header from hiding
+  // przycisk menu do ktorego jest zakotwiczony dropdown
+
+  // margin-left: 3rem;
+  // margin-right: 3rem;
+
   &.header-prevent-hide {
     transform: translateY(0%) !important;
   }
 
   .header-content {
+
+
 
     .logo-nav-wrapper {
        @extend .grid-container;
@@ -43,7 +50,7 @@
         clip: auto;
         font-weight: bold;
         line-height: 49px;
-        color: var(--color-text);
+        color: var(--color-heading);
         text-decoration: none;
         background: black;
         outline: 0;
@@ -143,10 +150,11 @@
               padding-top 300ms ease,
               padding-bottom 200ms ease;
 
-  padding-top: rem(32px);
-  padding-bottom: rem(20px);
+  // padding-top: rem(15px);
+  padding-bottom: rem(15px);
 
   &.sticky-header {
+
     position: absolute;
     top: 0;
     left: 0;
@@ -162,15 +170,17 @@
   }
 
   &.sticky-header--hidden {
-    transform: translate3d(0, -100%, 0); /* y value should be -1 * height */
+    transform: translate3d(0, -120%, 0); /* y value should be -1 * height */
   }
 
   &.sticky-header--fixed {
-    background-color: var(--color-background);
-    padding-top: rem(16px);
-    padding-bottom: rem(16px);
+    background-color: transparent; // Make background transparent
+    // width: 100%;
+    // padding-top: rem(10px);
+    padding-bottom: rem(60px);
     position: fixed;
-    border-bottom: 1px solid var(--color-line-subtle);
+    // border-bottom: 1px solid var(--color-line-subtle);
+    
 
     .logo {
       width: rem(44px);
@@ -179,7 +189,7 @@
 
     .site-title {
       opacity: 1;
-      height: rem(44px);
+      height: rem(20px);
       width: auto;
     }
   }

@@ -1,33 +1,117 @@
 <div class="layout layout-{{ entry.section_layout }}">
 
   {% if entry.section_layout == 'text' %}
-    <section class="project-text">
-      <div class="project-text-wrapper paragraph-normal">
-        {{ entry.content | markdownify }}
-      </div>
-    </section>
+  <section class="project-text">
+    <div class="project-text-wrapper paragraph-normal">
+      {{ entry.content | markdownify }}
+    </div>
+  </section>
   {% else %}
+  {% if entry.columns %}
+  {% for column in entry.columns %}
+  {% case column.type %}
+  {% when 'image' %}
+  <figure class="image-wrapper {{ column.positioning }}">
+    <img class="{{ column.border }}" src="{{ column.url | prepend: site.image_serve_path }}"
+      alt="{{ column.description | default: column.caption | default: page.title | normalize_whitespace }}">
+    {% if column.caption %}
+    <figcaption>{{ column.caption }}</figcaption>
+    {% endif %}
+  </figure>
+  {% when 'video' %}
+  <div class="video-wrapper">
+    <video src="{{ column.url | prepend: site.image_serve_path}}" playsinline autoplay loop muted></video>
+  </div>
+  {% when 'video-play-once' %}
+  <div class="video-wrapper">
+    <video src="{{ column.url | prepend: site.image_serve_path}}" playsinline autoplay muted></video>
+  </div>
 
-    {% for image in entry.images %}
+  {% when 'text' %}
+  <div class="text-wrapper">
+    {{ column.content | markdownify }}
+  </div>
+  {% when 'image-gallery-rectangle' %}
+  <div class="image-gallery image-gallery-rectangle" id="{{ column.id }}" 
+       data-images='{{ column.images | jsonify }}' 
+       data-image-serve-path="{{ site.image_serve_path }}">
+    <div class="gallery-container">
+      <img class="next" src="{{ column.images[0] | prepend: site.image_serve_path }}" alt="Gallery image">
+    </div>
+    <button class="gallery-nav prev">&#10094;</button>
+    <button class="gallery-nav next">&#10095;</button>
+  </div>
+  
+  {% when 'image-gallery-square' %}
+  <div class="image-gallery image-gallery-square" id="{{ column.id }}" 
+       data-images='{{ column.images | jsonify }}' 
+       data-image-serve-path="{{ site.image_serve_path }}">
+    <div class="gallery-container">
+      <img class="next" src="{{ column.images[0] | prepend: site.image_serve_path }}" alt="Gallery image">
+    </div>
+    <button class="gallery-nav prev">&#10094;</button>
+    <button class="gallery-nav next">&#10095;</button>
+  </div>
+  {% when 'image-gallery-almost-square' %}
+  <div class="image-gallery image-gallery-almost-square" id="{{ column.id }}" 
+       data-images='{{ column.images | jsonify }}' 
+       data-image-serve-path="{{ site.image_serve_path }}">
+    <div class="gallery-container">
+      <img class="next" src="{{ column.images[0] | prepend: site.image_serve_path }}" alt="Gallery image">
+    </div>
+    <button class="gallery-nav prev">&#10094;</button>
+    <button class="gallery-nav next">&#10095;</button>
+  </div>
+  {% when 'image-before-after' %}
+  <div class="image-comparison">
+    <img class="image-before" src="{{ column.before_url | prepend: site.image_serve_path }}" alt="Before image">
+    <img class="image-after" src="{{ column.after_url | prepend: site.image_serve_path }}" alt="After image">
+    <input type="range" min="0" max="100" value="50" class="slider" id="before-after-slider">
+    <svg class="slider-line" width="3" height="100%" viewBox="0 0 5 100" preserveAspectRatio="none">
+      <line x1="2.5" y1="0" x2="2.5" y2="100" stroke="black" stroke-width="5"/>
+    </svg>
+        <div class="slider-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12H3M3 12L8 7M3 12L8 17M21 12L16 7M21 12L16 17"/>
+      </svg>
+    </div>
+  </div>
+  {% when 'embedded-video' %}
+  <div class="video-wrapper">
+    <iframe 
+      src="{{ column.url }}" 
+      title="YouTube video player" 
+      frameborder="0"
+      width="100%" height="400vh"       
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+    </iframe>
+  </div>
+  {% endcase %}
+  {% endfor %}
+  {% else %}
+  {% for image in entry.images %}
+  {% capture stored_description %}
+  {% if image.description %}
+  {{ image.description }}
+  {% elsif image.caption %}
+  {{ image.caption }}
+  {% else %}
+  {{ page.title }}
+  {% endif %}
+  {% endcapture %}
 
-      {% capture stored_description %}
-        {% if image.description %}
-          {{ image.description }}
-        {% elsif image.caption %}
-          {{ image.caption }}
-        {% else %}
-          {{ page.title }}
-        {% endif %}
-      {% endcapture %}
-
-      <figure class="image-wrapper {{ image.positioning }}">
-        <img class="{{ image.border }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}">
-        {% if image.caption %}
-          <figcaption>{{ image.caption }}</figcaption>
-        {% endif %}
-      </figure>
-
-    {% endfor %}
+  <figure class="image-wrapper {{ image.positioning }}">
+    <img class="{{ image.border }}" src="{{ image.url | prepend: site.image_serve_path }}"
+      alt="{{ stored_description | normalize_whitespace }}">
+    {% if image.caption %}
+    <figcaption>{{ image.caption }}</figcaption>
+    {% endif %}
+  </figure>
+  {% endfor %}
+  {% endif %}
   {% endif %}
 
 </div>
+

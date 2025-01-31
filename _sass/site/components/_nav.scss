@@ -1,35 +1,48 @@
 .global-wrapper > header nav {
   position: relative;
   z-index: 100;
+  background-color: var(--color-background); // Match the page background color
+  transition: all 0.3s ease; // Smooth transition for all properties
+  // width: 100%;
+  
 
+  // Overlay for mobile menu
   &:before {
-    opacity: 0;
     content: '';
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(#000000, 0.7);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1; // Place it behind the nav content
   }
 
+  // Styles for when mobile menu is shown
   &.show {
     &:before {
-      transition: opacity 150ms ease-in-out;
-      content: '';
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: rgba(#000, 0.9);
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
       opacity: 1;
+      pointer-events: auto;
+      
 
       @include grid-media(tablet) {
-        display: none;
+        display: none; // Hide overlay on tablet and larger
       }
     }
 
     .mobile-nav {
       position: fixed;
-      border: 1px solid white;
+      border: 1px solid (var(--color-heading));
       color: white;
+      z-index: 101; // Ensure button stays on top
+      transition: all 0.3s ease;
+      margin-right: 3rem;
+
 
       &:hover,
       &:focus {
@@ -44,72 +57,90 @@
     ul {
       display: block;
       opacity: 1;
+      pointer-events: auto;
       overflow-y: auto;
       overflow-x: hidden;
-      max-height: 80vh;
       max-height: calc(100vh - (100px + var(--page-margin)));
+      transition: all 0.3s ease;
+      left: 0; // Full width on mobile
+      right: 0; // Full width on mobile
+      width: 100%; // Ensure full width
     }
   }
 
+  // Mobile navigation button
   a.mobile-nav {
-    display: inline-block;
-    float: right;
-    right: var(--page-margin);
+    right: rem(1px);
+    margin-right: 3rem;
+    margin-top: rem(25px);
+
+
     padding: rem(10px) rem(20px);
-    border: 1px solid var(--color-text);
+    border: 1px solid var(--color-heading);
     text-transform: uppercase;
     letter-spacing: var(--font-letter-spacing-subtle);
-    color: var(--color-text);
+    color: var(--color-heading);
     text-decoration: none;
-    position: static;
+    position: absolute;
+    z-index: 101;
+    background-color: black; 
+
 
     &:hover,
     &:focus {
-      background: rgba(var(--color-text), 0.2);
+      // background: rgba(var(--color-text), 0.2);
       outline: 0;
     }
 
     &:active {
-      background: rgba(var(--color-text), 0.3);
+      // background: rgba(var(--color-text), 0.3);
     }
 
     @include grid-media(tablet) {
-      display: none;
+      display: none; // Hide on tablet and larger
     }
   }
 
+  // Navigation menu
+  //tutaj problematyczna ramka
   ul {
     max-height: 0;
     padding: 0;
-    margin: 0;
+    // margin: 0;
+    margin-right: 3rem;
+
     opacity: 0;
-    transition: max-height 150ms ease-in-out;
-    position: fixed;
+    transition: all 0.3s ease;
     overflow: hidden;
-    left: var(--page-margin);
-    right: var(--page-margin);
+    position: fixed;
+    left: 0; // Full width on mobile
+    right: 0; // Full width on mobile
+    width: 100%; // Ensure full width
     top: 100px;
     list-style-type: none;
-    background: var(--color-text);
-    background: black;
-    border: 1px solid var(--color-text);
+    background: var(--color-background);
+    border: 0px solid var(--color-text);
     font-size: var(--font-size-nav);
     letter-spacing: var(--font-letter-spacing-subtle);
-    height: auto;
+    z-index: 100;
+    pointer-events: none;
 
     li {
       display: block;
-      border-bottom: 1px solid var(--color-text);
+      // border-bottom: 1px solid var(--color-text);
+      border: 1px solid (var(--color-heading));
+
 
       &:last-of-type {
-        border-bottom: 0;
+        border-bottom: 1;
       }
 
       a {
         text-decoration: none;
-        color: var(--color-text);
+        color: var(--color-heading);
         display: block;
         padding: var(--inner-padding);
+        font-weight: 500;
 
         &:hover {
           background: rgba(var(--color-text), .2);
@@ -134,29 +165,40 @@
       }
     }
 
+    // Desktop styles
+    // Desktop styles
     @include grid-media(tablet) {
+      
       display: block;
       max-height: none;
       position: static;
       text-align: right;
+      padding-right: 3rem;
       background: inherit;
       opacity: 1;
       border: 0;
-      margin-top: rem(8px);
+      // margin-right: 30rem;
+
+      // margin-top: rem(8px);
+      padding-top: rem(8px);
+      pointer-events: auto;
+      transition: all 0.3s ease;
+      
 
       li {
         display: inline-block;
         position: relative;
-        padding-left: 1em;
+        padding-left: 1.5em;
         padding-bottom: rem(9px);
         border: 0;
+        
 
         a {
           text-decoration: none;
           padding: 0 0 .02em 0;
           background-color: inherit;
           border-bottom: 1px solid transparent;
-          opacity: 0.7;
+          opacity: 1;
           transition: all 100ms ease-in-out;
 
           &:hover,
