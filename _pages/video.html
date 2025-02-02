@@ -8,7 +8,6 @@ priority: 0.9
 
 
 <div class="projects-intro-wrapper">
-  {%- comment -%} <p class="projects-intro type-level-1">ASDF</p> {%- endcomment -%}
 </div>
 
 
@@ -27,10 +26,9 @@ priority: 0.9
             <img src="{{ project.thumbnail | prepend: site.image_serve_path }}" alt="{{ project.title }}" width="600" height="600">
           {% endif %}
           <p class="thumbnail-description">
-            <span><strong>{{ project.title }}</strong> </span>
-            <span style="font-size: 0.7em; padding-top: 0.5rem;">{{ project.description }}</span>
-
-            <span style="font-size:0.7em; padding-top: 2rem;">{{ project.tags | join: ' • '| replace: '+',' ' }}</span>
+            <span class="project-title">{{ project.title }}</span>
+            <span class="project-description" >{{ project.description }}</span>
+            <span class="project-tags">{{ project.tags | join: ' • '| replace: '+',' ' }}</span>
           </p>
         </div>
         {%- comment -%} <h3 aria-hidden="true">{{ project.title }}</h3> {%- endcomment -%}

@@ -2,8 +2,8 @@
 date: 2023-06-15
 priority: 10
 published: true
-title: ""
-description: "Video promujące Center of Excellence"
+title: "Center of Excellence"
+description: "Video promujące ofertę szkoleniową"
 tags: business video
 thumbnail: '\video\szkolenia.png'
 time_period:

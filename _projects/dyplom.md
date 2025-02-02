@@ -2,10 +2,10 @@
 date: 2023-06-15
 priority: 1
 published: true
-title: ""
-description: "Żywienie roślin"
+title: "Żywienie roślin"
+description: "Pokaz audiowiuzualny, praca magisterska"
 tags: master's+project animation mapping audiovisual+show
-thumbnail: '/video/dyplom/dyplom-short-1.mp4'
+thumbnail: '/video/dyplom/dyplom-short-4.mp4'
 time_period:
 page: video
 

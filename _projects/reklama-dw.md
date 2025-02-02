@@ -2,8 +2,8 @@
 date: 2023-06-15
 priority: 7
 published: true
-title: ""
-description: "Reklama Data Wizards"
+title: "Data Wizards"
+description: "Reklama marki"
 tags: animation business 
 thumbnail: '\video\dw.webp'
 time_period:

@@ -2,8 +2,8 @@
 date: 2023-06-15
 priority: 2
 published: true
-title: ""
-description: "Podcast Analityka dla kierownika"
+title: "Analityka dla kierownika"
+description: "Animacja intro podcastu"
 tags: animation business podcast
 thumbnail: '\video\analityka-dla-kierownika\analityka-dla-kierownika.mp4'
 time_period:

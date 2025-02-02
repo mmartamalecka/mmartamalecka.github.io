@@ -48,7 +48,6 @@ $thumb-animation-ease-out: ease-in-out;
   }
 }
 
-//Styling
 .projects-intro {
   position: relative;
   margin-bottom: 2.5rem;
@@ -84,7 +83,6 @@ $thumb-animation-ease-out: ease-in-out;
         text-align: center;
         filter: grayscale(0%);
 
-        // Animate filters
         transition-property: filter;
         transition-timing-function: $thumb-animation-ease-out;
         transition-duration: $thumb-animation-time-out;
@@ -106,7 +104,6 @@ $thumb-animation-ease-out: ease-in-out;
         text-align: center;
         filter: grayscale(0%);
 
-        // Animate filters
         transition-property: filter;
         transition-timing-function: $thumb-animation-ease-out;
         transition-duration: $thumb-animation-time-out;
@@ -156,6 +153,7 @@ $thumb-animation-ease-out: ease-in-out;
           align-items: flex-start;
           text-align: left; 
 
+
           span.thumbnail-tag-media {
             display: block;
             position: relative;
@@ -167,17 +165,27 @@ $thumb-animation-ease-out: ease-in-out;
             display: block;
             color: white;
             line-height: 1;
-            font-size: 0.9rem;
-
-
-            //offset for drop-in
+        
             -webkit-transform-style: preserve-3d;
             transform: translate3d(0, 10px, 0);
-
-            //animate drop-in out
             transition-property: transform;
             transition-timing-function: $thumb-animation-ease-out;
             transition-duration: $thumb-animation-time-out;
+        
+            &.project-title {
+              font-size: 1.1em;
+              font-weight: 700;
+            }
+        
+            &.project-description {
+              font-size: 0.7em;
+              padding-top: 0.5rem;
+            }
+        
+            &.project-tags {
+              font-size: 0.7em;
+              padding-top: 2rem;
+            }
           }
         }
       }
@@ -185,19 +193,15 @@ $thumb-animation-ease-out: ease-in-out;
       &:hover .thumbnail-description-wrapper p.thumbnail-description,
       &:focus .thumbnail-description-wrapper p.thumbnail-description {
 
-        //semi-transparent background
         opacity: 1;
 
-        //animate fade in
         transition-property: opacity;
         transition-timing-function: $thumb-animation-ease-in;
         transition-duration: $thumb-animation-time-in;
 
         span {
-          //drop-in is reset back to original position
           transform: translate3d(0, 0, 0);
 
-          //animate drop-in in
           transition-property: transform;
           transition-timing-function: $thumb-animation-ease-in;
           transition-duration: $thumb-animation-time-in;
@@ -208,7 +212,6 @@ $thumb-animation-ease-out: ease-in-out;
       &:focus .thumbnail-description-wrapper img {
         filter:
           grayscale(1%)
-          // contrast(200%)
         ;
       }
     }

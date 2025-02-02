@@ -2,9 +2,9 @@
 date: 2023-06-15
 priority: 3
 published: true
-title: ""
-description: "Jarzmo - Bat Trip"
-tags: music+video animation mapping production
+title: "Jarzmo - Bat Trip"
+description: "Mapping animacji w jaskini, teledysk, grafika"
+tags: music+video animation mapping production graphic+design
 thumbnail: '\video\jarzmo\jarzmo.jpg'
 time_period:
 page: video

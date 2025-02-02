@@ -2,8 +2,8 @@
 date: 2023-06-15
 priority: 5
 published: true
-title: ""
-description: "Kino pod Baranami"
+title: "Letnie Tanie Kinobranie 2021"
+description: "Animacja i mapping na elewacji budynku Kina Pod Baranami"
 tags: animation mapping production
 thumbnail: "/video/kino/kino-short1.mp4"
 time_period:

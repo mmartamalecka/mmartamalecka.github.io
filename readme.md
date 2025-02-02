@@ -2,11 +2,11 @@
 
 ## Setup
 
-``
+```
 
 bundle exec jekyll serve -H --livereload
 
-``
+```
 
 This site runs on Jekyll, an opensource static site generating platform.
 
@@ -39,12 +39,6 @@ This site runs on Jekyll, an opensource static site generating platform.
 - Go to http://localhost:4000/ in your browser
 
 
-## General information
-
-- Static website
-- Optimised for efficient [PageSpeed Insights benchmarks](https://developers.google.com/speed/pagespeed/insights/?url=himatt.com) (still more to do in this space)
-- No Jekyll plugin dependancies (previously used Bourbon and Neat, now uses CSS Grid and CSS Custom properties)
-
 ## Licenses
 
 ### Underlying source code
@@ -53,12 +47,3 @@ Under the [GNU General Public License v3.0](LICENSE), you can adapt and use the 
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
 
-
-### Content
-
-© Matthew Grey and himatt.com. Unauthorised use and/or duplication and
-adaptation of this material (all image formats, text and additional media files)
-without express and written permission from this site’s author and/or owner is
-strictly prohibited. Excerpts and links may be used, provided that full and
-clear credit is given to Matthew Grey and/or himatt.com with appropriate and
-specific direction to the original content.

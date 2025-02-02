@@ -1,10 +1,10 @@
 ---
 date: 2023-06-15
-priority: 5
+priority: 4
 published: true
-title: ""
-description: "Animacja: Jak działa KSeF Connector?"
-tags: animation business 
+title: "Jak działa KSeF Connector?"
+description: "Animacja"
+tags: animation business explainer+video
 thumbnail: '\video\ksef\ksef.png'
 time_period:
 page: video
