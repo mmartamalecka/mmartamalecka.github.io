@@ -28,26 +28,41 @@ content_layout:
         content: |
           # Jarzmo - Bat Trip 
           ## Teledysk <br><br>
+
+          ## **Założenia:**
+          - stworzenie teledysku inspirowanego Twin Peaks i estetyką cyberpunk
+          {: .paragraph-normal}
           ## **Zakres prac:**
           - przygotowanie animacji do mappingu
           - zrealizowanie mappingu na ścianie jaskini
           - współpraca nad montażem teledysku
-          - projekt grafiki do utworu (widoczna obok)
+          - projekt grafiki do utworu (widoczna obok)<br><br>
           {: .paragraph-normal}
+
+          
+          
+
+
+
         
   - section_layout: 2col
-    images:
-      - caption: 
-        description:
-        url: '\video\jarzmo\jarzmo2.jpg'
-        width:
-        height:
+    columns:
+      - type: video
+        url: '\video\jarzmo\jarzmo-frag4.mov'
 
-      - caption: 
-        description: 
+
+      - type: image
         url: '\video\jarzmo\jarzmo2.jpg'
-        width:
-        height:   
+        caption:      
+        
+  - section_layout: 1col
+    columns:
+      - type: video
+        url: '\video\jarzmo\jarzmo-frag9.mov'
+
+
+       
+        
 
 
   - section_layout: 1col

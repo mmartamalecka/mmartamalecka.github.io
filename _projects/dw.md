@@ -49,6 +49,7 @@ content_layout:
         after_url: '/design/DW/logo2.png'  
 
 
+
   - section_layout: 2col
     images:
       - caption: 

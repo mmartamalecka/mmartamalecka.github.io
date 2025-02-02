@@ -61,6 +61,17 @@ content_layout:
           
 # Camera obscura, fenakistiskop, złudzenia optyczne
 # Tutaj sekcja z suwakiem render vs. nagranie 
+
+  - section_layout: 2col
+
+    columns:
+      - type: text
+        content: Porównanie wyrenderowanej animacji i finalnego efektu na budynku.
+      - type: video-before-after
+        before_url: '/video/kino/kino-porownanie1.mp4'
+        after_url: '/video/kino/kino-porownanie2.mp4'  
+
+
   - section_layout: 1col
     columns:
       - type: embedded-video
