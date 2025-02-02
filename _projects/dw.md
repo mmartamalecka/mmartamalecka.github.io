@@ -67,13 +67,13 @@ content_layout:
     images:
       - caption: 
         description:
-        url: '/design/DW/dw-grafiki-5.webp'
+        url: '/design/DW/dw-grafiki-5.png'
         width:
         height:
 
       - caption: 
         description: 
-        url: '/design/DW/dw-grafiki-6.webp'
+        url: '/design/DW/dw-grafiki-6.png'
         width:
         height:   
                     

@@ -23,15 +23,15 @@ long-title: Marta Małecka
 email: mmartamaleckan@gmail.com
 description: "Portfolio"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://himatt.com" # the base hostname & protocol for your site
+url: "https://mmartamalecka.pl" # the base hostname & protocol for your site
 timezone: Europe/Warsaw
-year: 2024
+year: 2025
 start-year: 2010
 sitemap: true
 
 
 # Content
-image_serve_path: "/images" # <img src="{{ site.image_serve_path }}/projects/img.jpg">
+image_serve_path: "/images-compressed" # <img src="{{ site.image_serve_path }}/projects/img.jpg">
 
 # Build settings
 markdown: kramdown
@@ -63,8 +63,8 @@ navigation:
     url: /projektowanie
   - title: ANIMATION & VIDEO
     url: /video
-  - title: CONTACT
-    url: /contact
+  - title: ABOUT
+    url: /about
 
 permalink: /:title/
 

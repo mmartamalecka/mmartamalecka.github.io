@@ -47,7 +47,7 @@ content_layout:
   - section_layout: 2col
     columns:
       - type: video
-        url: "/video/kino/kino_short2.webm"
+        url: "/video/kino/kino_short2.mp4"
         caption: 
       - type: text
         content: |

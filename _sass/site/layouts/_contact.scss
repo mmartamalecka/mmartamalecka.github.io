@@ -1,21 +1,49 @@
 .contact-wrapper {
-
   .contact {
     @extend .grid-container;
+    display: flex;
+    flex-direction: column;
 
     @include grid-media(tablet) {
-      margin-top: 5vh
+      flex-direction: row;
+      margin-top: 5vh;
+    }
+
+    .contact-photo {
+      @include grid-column(12);
+
+      @include grid-media(tablet) {
+        @include grid-column(6);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
     }
 
     .contact-intro {
       @include grid-column(12);
 
       @include grid-media(tablet) {
-        @include grid-column(5);
+        @include grid-column(6);
+        // padding-left: 2rem;
       }
+    
 
       @include grid-media(desktop) {
         @include grid-column(5);
+      }
+
+      .contact-name {
+        margin-bottom: 0; // Adjust this value as needed
+        padding-bottom: 0;
+      }
+
+      .contact-title {
+        margin-top: 0;
+        margin-bottom: 1rem; // Adjust this value as needed
       }
     }
 
