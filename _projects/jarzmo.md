@@ -25,7 +25,7 @@ content_layout:
         url: '\video\jarzmo\jarzmo.jpg'
         caption: ""
       - type: text
-        content: |
+        content_pl: |
           # Jarzmo - Bat Trip 
           ## Teledysk <br><br>
 
@@ -38,6 +38,8 @@ content_layout:
           - współpraca nad montażem teledysku
           - projekt grafiki do utworu (widoczna obok)<br><br>
           {: .paragraph-normal}
+        content_en: |
+          test
 
           
           
@@ -71,4 +73,3 @@ content_layout:
         url: https://www.youtube.com/embed/wwikFrNMuA8?si=ztIm8geHeA7gqiFW
 
 ---
-

@@ -29,7 +29,12 @@
 
   {% when 'text' %}
   <div class="text-wrapper">
-    {{ column.content | markdownify }}
+    <div class="lang-en">
+      {{ column.content_en | markdownify }}
+    </div>
+    <div class="lang-pl">
+      {{ column.content_pl | markdownify }}
+    </div>
   </div>
   {% when 'image-gallery-rectangle' %}
   <div class="image-gallery image-gallery-rectangle" id="{{ column.id }}" 
