@@ -2,9 +2,10 @@
 date: 2023-07-01
 published: true
 priority: 1
-title: "AMODIT"
-# description: "Visual identity, various designs for the brand"
-description: Rebranding marki, identyfikacja wizualna
+title_pl: "AMODIT"
+title_en: "AMODIT"
+description_pl: Odświeżenie identyfikacji wizualnej marki
+description_en: Brand refresh
 tags: visual+identity digital print ads social+media
 thumbnail: '/design/AMODIT/amodit-logo.mp4'
 time_period: 
@@ -20,7 +21,7 @@ content_layout:
         width:
         height:
       - type: text
-        content: |
+        content_pl: |
           # AMODIT <br> 
           ## System obiegu dokumentów, umożliwiający stworzenie dowolnego procesu, zgodnie z potrzebami użytkownika. <br> <br>
           ## **Zakres prac:**
@@ -37,7 +38,23 @@ content_layout:
           - unowocześnienie i zwiększenie wartości biznesowej
           - stworzenie rozbudowanego, spójnego systemu wizualnego
           {: .paragraph-normal}
-  
+        content_en: |
+          # AMODIT <br> 
+          ## System obiegu dokumentów, umożliwiający stworzenie dowolnego procesu, zgodnie z potrzebami użytkownika. <br> <br>
+          ## **Zakres prac:**
+          - odświeżenie identyfikacji wizualnej marki
+          - przygotowywanie grafik na social media i tworzenie szablonów do użytku przez inne osoby z działu
+          - współtworzenie scenariuszy, reżyseria, nagrywanie i montaż materiałów wideo
+          - skład e-booków
+          - uzupełnienie zasobów firmowych o szablony Word, PowerPoint
+          - przygotowywanie materiałów do druku
+          - przygotowywanie materiałów konferencyjnych
+          - opracowanie identyfikacji wizualnej dla konferencji AMODIT Forum Innowacji i Automatyzacji 2024 - przygotowanie materiałów do druku, prezentacji, animacji, montaż materiałów filmowych, zaprojektowanie grafik <br> 
+          {: .paragraph-normal}
+          ## **Założenia:**
+          - unowocześnienie i zwiększenie wartości biznesowej
+          - stworzenie rozbudowanego, spójnego systemu wizualnego
+          {: .paragraph-normal}
     
         title: 'AMODIT'
 
