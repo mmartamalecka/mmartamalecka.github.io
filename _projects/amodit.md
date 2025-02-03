@@ -31,8 +31,8 @@ content_layout:
           - skład e-booków
           - uzupełnienie zasobów firmowych o szablony Word, PowerPoint
           - przygotowywanie materiałów do druku
-          - przygotowywanie materiałów konferencyjnych
-          - opracowanie identyfikacji wizualnej dla konferencji AMODIT Forum Innowacji i Automatyzacji 2024 - przygotowanie materiałów do druku, prezentacji, animacji, montaż materiałów filmowych, zaprojektowanie grafik <br> 
+          - przygotowywanie materiałów konferencyjnych, takich jak identyfikatory, ścianki, prezentacja, animacja na przerwy
+         <br> 
           {: .paragraph-normal}
           ## **Założenia:**
           - unowocześnienie i zwiększenie wartości biznesowej
@@ -40,20 +40,19 @@ content_layout:
           {: .paragraph-normal}
         content_en: |
           # AMODIT <br> 
-          ## System obiegu dokumentów, umożliwiający stworzenie dowolnego procesu, zgodnie z potrzebami użytkownika. <br> <br>
-          ## **Zakres prac:**
-          - odświeżenie identyfikacji wizualnej marki
-          - przygotowywanie grafik na social media i tworzenie szablonów do użytku przez inne osoby z działu
-          - współtworzenie scenariuszy, reżyseria, nagrywanie i montaż materiałów wideo
-          - skład e-booków
-          - uzupełnienie zasobów firmowych o szablony Word, PowerPoint
-          - przygotowywanie materiałów do druku
-          - przygotowywanie materiałów konferencyjnych
-          - opracowanie identyfikacji wizualnej dla konferencji AMODIT Forum Innowacji i Automatyzacji 2024 - przygotowanie materiałów do druku, prezentacji, animacji, montaż materiałów filmowych, zaprojektowanie grafik <br> 
+          ## Electronic Document Workflow System, enabling the creation of any process according to the user's needs. <br> <br>
+          ## **Project scope:**
+          - refreshing the brand's visual identity
+          - designing graphics for social media and creating templates for use by other team members
+          - co-developing scripts, directing, recording, and editing video materials
+          - designing e-books
+          - expanding company resources with Word and PowerPoint templates
+          - preparing print materials
+          - preparing conference materials, such as name tags, backdrop stands, presentations, and animations for breaks <br> 
           {: .paragraph-normal}
-          ## **Założenia:**
-          - unowocześnienie i zwiększenie wartości biznesowej
-          - stworzenie rozbudowanego, spójnego systemu wizualnego
+          ## **Objectives:**
+          - modernization and increasing business value
+          - creating a comprehensive and cohesive visual system
           {: .paragraph-normal}
     
         title: 'AMODIT'
