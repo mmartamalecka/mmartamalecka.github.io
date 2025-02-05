@@ -2,8 +2,10 @@
 date: 2023-06-15
 priority: 7
 published: true
-title: "Data Wizards"
-description: "Reklama marki"
+title_pl: "Data Wizards"
+title_en: "Data Wizards"
+description_pl: "Reklama marki"
+description_en: "Brand advertisement"
 tags: animation business 
 thumbnail: '\video\dw.webp'
 time_period:
@@ -19,7 +21,7 @@ content_layout:
         url: '\video\dw.webp'
         caption: 
       - type: text
-        content: |
+        content_pl: |
           # Reklama Data Wizards
           
           ## **Zakres prac:**
@@ -27,6 +29,15 @@ content_layout:
           - projekt i animacja
           - montaż
           {: .paragraph-normal}
+
+        content_en: |
+          # Data Wizards ddvertisement
+          
+          ## **Project scope:**
+          - collaboration on the script
+          - design and animation
+          - editing
+          {: .paragraph-normal}  
 
   - section_layout: 1col
     columns:

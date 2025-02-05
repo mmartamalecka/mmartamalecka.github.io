@@ -2,9 +2,10 @@
 date: 2023-07-01
 published: true
 priority: 9
-title: "Magisterska praca teoretyczna"
-# description: "Digital+ads, print"
-description: Tytuł "Żywienie roślin"
+title_pl: "Magisterska praca teoretyczna"
+title_en: "Master's thesis (theoretical work)"
+description_pl: Tytuł "Żywienie roślin"
+description_en: Titled "Nourishing Plants"
 tags: editorial+design
 thumbnail: \design\dyplom-magazyn\dyplom-7.png
 time_period: 
@@ -20,13 +21,20 @@ content_layout:
         width:
         height:
       - type: text
-        content: |
+        content_pl: |
           # Żywienie roślin <br>
-          ## Magisterska praca teoretyczna. <br> <br>
+          ## Magisterska praca teoretyczna <br> <br>
           ## **Zakres prac:**
           - projekt i skład tekstu
           - przygotowanie materiałów do druku
           {: .paragraph-normal}
+        content_en: |
+          # Nourishing Plants <br>
+          ## Master's thesis (theoretical work) <br> <br>
+          ## **Project scope:**
+          - editorial design
+          - preparing materials for print
+          {: .paragraph-normal}  
     
         title: 
 

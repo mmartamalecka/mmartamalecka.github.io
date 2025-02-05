@@ -2,8 +2,10 @@
 date: 2023-06-15
 published: true
 priority: 7
-title: "Pharma Insighter"
-description: "szata graficzna dla rozwiązania marki Data Wizards"
+title_pl: "Pharma Insighter"
+title_en: "Pharma Insighter"
+description_pl: "szata graficzna dla rozwiązania marki Data Wizards"
+description_en: "graphic design for the Data Wizards brand solution."
 tags: graphic+design visual+identity 
 thumbnail: '/design/PI/pi1.webp'
 time_period: 
@@ -19,12 +21,19 @@ content_layout:
         width:
         height:
       - type: text
-        content: |
+        content_pl: |
           # Pharma Insighter <br> 
           ## Narzędzie dla branży farmaceutycznej <br> <br>
           ## **Zakres prac:**
           - zaprojektowanie szaty graficznej narzędzia, spójnej z marką Data Wizards <br> 
           {: .paragraph-normal}
+
+        content_en: |
+          # Pharma Insighter <br> 
+          ## Software solution for the pharmaceutical industry <br> <br>
+          ## **Project scope:**
+          - designing the graphic layout of the software solution, consistent with the Data Wizards brand <br> 
+          {: .paragraph-normal}  
       
   
     

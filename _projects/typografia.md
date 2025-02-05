@@ -2,9 +2,10 @@
 date: 2023-07-01
 published: true
 priority: 7
-title: "Typografia"
-# description: "Visual identity, various designs for the brand"
-description: katalog literniczy o polskiej typografii
+title_pl: "Typografia"
+title_en: "Typography"
+description_pl: Katalog o polskiej typografii
+description_en: Catalog about Polish typography
 tags: editorial+design print
 thumbnail: '/design/katalog/katalog-1.png'
 time_period: 
@@ -20,11 +21,17 @@ content_layout:
         width:
         height:
       - type: text
-        content: |
+        content_pl: |
           # Typografia <br> 
           ## Kwartalnik o polskiej typografii. <br> <br>
            Projekt zrealizowany w Pracowni Liternictwa i Typografii na Akademii Sztuk Pięknych w Krakowie, 2017r.<br><br>
            {: .paragraph-normal}
+
+        content_en: |
+          # Typography <br> 
+          ## A quarterly on Polish typography. <br> <br>
+           Project completed at the Lettering and Typography Studio at the Academy of Fine Arts in Cracow, 2017.<br><br>
+           {: .paragraph-normal}   
            
 
 

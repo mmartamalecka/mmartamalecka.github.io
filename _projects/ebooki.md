@@ -2,15 +2,14 @@
 date: 2023-05-01
 published: true
 priority: 3
-title: "E-booki"
+title_pl: "E-booki"
+title_en: "E-books"
 tags: graphic+design editorial+design book+cover
 thumbnail: "/design/ebooki/grafiki-ebooki-kwadraty-2.webp"
 time_period:
 page: design
 
 content_layout:
-
-   
 
   - section_layout: 2col
     columns:

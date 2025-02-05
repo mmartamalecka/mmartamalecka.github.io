@@ -2,8 +2,10 @@
 date: 2023-06-15
 priority: 3
 published: true
-title: "Jarzmo - Bat Trip"
-description: "Mapping animacji w jaskini, teledysk, grafika"
+title_pl: "Jarzmo - Bat Trip"
+title_en: "Jarzmo - Bat Trip"
+description_pl: "Mapping animacji w jaskini, teledysk, grafika"
+description_en: "Animation mapping in a cave, music video, graphics"
 tags: music+video animation mapping production graphic+design
 thumbnail: '\video\jarzmo\jarzmo.jpg'
 time_period:
@@ -39,7 +41,18 @@ content_layout:
           - projekt grafiki do utworu (widoczna obok)<br><br>
           {: .paragraph-normal}
         content_en: |
-          test
+          # Jarzmo - Bat Trip 
+          ## Music video <br><br>
+
+          ## **Objectives:**
+          - creating a music video inspired by Twin Peaks and cyberpunk aesthetics
+          {: .paragraph-normal}
+          ## **Project scope:**
+          - preparing animation for mapping
+          - executing mapping on a cave wall
+          - collaborating on music video editing
+          - designing artwork for the track (on the left)<br><br>
+          {: .paragraph-normal}
 
           
           

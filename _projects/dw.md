@@ -2,9 +2,11 @@
 date: 2023-06-15
 published: true
 priority: 2
-title: "Data Wizards"
-description: "identyfikacja wizualna marki"
-tags: projektowanie digital+marketing
+title_pl: "Data Wizards"
+title_en: "Data Wizards"
+description_pl: "identyfikacja wizualna marki"
+description_en: "visual identity"
+tags: graphic+design visual+identity digital print
 thumbnail: "/design/dw-kwadrat.webp"
 time_period: 
 page: design
@@ -19,7 +21,7 @@ content_layout:
         width:
         height:
       - type: text
-        content: |
+        content_pl: |
           # Data Wizards <br>
           ## Firma zajmująca się kompleksowymi usługami w zakresie wdrożeń Business Intelligence dla firm w Polsce i za granicą. <br><br>
           ## **Zakres prac:**
@@ -37,6 +39,25 @@ content_layout:
           - unowocześnienie i zwiększenie funkcjonalności logo (poprzez uproszczenie, znalezienie odpowiednich proporcji i stworzenie wersji alternatywnej)
           - stworzenie rozbudowanego i spójnego systemu wizualnego
           {: .paragraph-normal}
+
+        content_en: |
+          # Data Wizards <br>
+          ## A company specializing in comprehensive Business Intelligence implementation services for businesses in Poland and abroad. <br><br>
+          ## **Project scope:**
+          - refreshing the brand's visual identity
+          - designing graphics for social media and creating templates for use by other team members
+          - preparing one-pagers and presentation templates
+          - video editing
+          - designing e-books
+          - preparing conference materials, such as business cards, brochures, backdrop stands and roll-ups
+          - participating in the design process of the new website
+          - designing website graphics based on key visuals
+          <br>
+          {: .paragraph-normal}
+          ## **Objectives:**
+          - modernizing and enhancing the functionality of the logo (through simplification, finding the right proportions, and creating an alternative version)
+          - creating a comprehensive and cohesive visual system
+          {: .paragraph-normal}  
 
 
 

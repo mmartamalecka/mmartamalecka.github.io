@@ -2,8 +2,10 @@
 date: 2023-06-15
 priority: 10
 published: true
-title: "Center of Excellence"
-description: "Video promujące ofertę szkoleniową"
+title_pl: "Center of Excellence"
+title_en: "Center of Excellence"
+description_pl: "Video promujące ofertę szkoleniową"
+description_en: "Video promoting the courses offer"
 tags: business video
 thumbnail: '\video\szkolenia.png'
 time_period:
@@ -19,7 +21,7 @@ content_layout:
         url: '\video\szkolenia.png'
         caption: 
       - type: text
-        content: |
+        content_pl: |
           # Film promujący Center of Excellence 
           ## Szkolenia oferowane przez markę Astrafox <br><br>
 
@@ -28,8 +30,17 @@ content_layout:
           - nagranie materiału
           - montaż
           {: .paragraph-normal}
+
+        content_en: |
+          # Promotional video for the Center of Excellence
+          ## Courses offered by the Astrafox brand <br><br>
+
+          ## **Project scope:**
+          - creating the script
+          - video recording
+          - editing
+          {: .paragraph-normal}  
           
-          {: .paragraph-normal}
 
   - section_layout: 1col
     columns:

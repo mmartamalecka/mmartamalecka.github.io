@@ -2,8 +2,10 @@
 date: 2023-06-15
 priority: 4
 published: true
-title: "Jak działa KSeF Connector?"
-description: "Animacja"
+title_pl: "Jak działa KSeF Connector?"
+title_en: "How does the KSeF Connector work?"
+description_pl: "Animacja"
+description_en: "Animation"
 tags: animation business explainer+video
 thumbnail: '\video\ksef\ksef.png'
 time_period:
@@ -14,8 +16,6 @@ website:
   button_text: 
   url: 
 
-# intro: |
-
 
 content_layout:
 
@@ -25,7 +25,7 @@ content_layout:
         url: '\video\ksef\ksef.png'
         caption: 
       - type: text
-        content: |
+        content_pl: |
           # Jak działa KSeF Connector?
           
           Animacja tłumacząca działanie narzędzia KSeF Connector oferowanego przez markę AMODIT.<br><br>
@@ -33,6 +33,16 @@ content_layout:
           - opracowanie scenariusza na podstawie wytycznych
           - projekt i animacja
           - montaż
+          {: .paragraph-normal}
+        
+        content_en: |
+          # How does KSeF Connector work?
+          
+          An animation explaining how the KSeF Connector tool offered by the AMODIT brand works.<br><br>
+          ## **Project scope:**
+          - developing the script based on guidelines
+          - design and animation
+          - editing
           {: .paragraph-normal}
 
   - section_layout: 1col
