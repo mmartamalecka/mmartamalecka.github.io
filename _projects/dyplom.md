@@ -25,8 +25,9 @@ content_layout:
           ## Diploma project created at the Animated Film Studio at the Academy of Fine Arts, Cracow 2020. <br>
           ### animation, mapping, audiovisual show<br><br>
 
-          ## **Summary:** <br>
-         Displaying animations on plants directly influences their physiological processes. The surrounding space and the staging enhance the feeling of being in a place that requires special access—almost like a laboratory, where plants are subjected to experiments with an unknown purpose. During the presentation, what happens also affects the viewer, testing their sensitivity, patience, and endurance. <br>
+          ## **Summary:** 
+          <br>
+          Displaying animations on plants directly influences their physiological processes. The surrounding space and the staging enhance the feeling of being in a place that requires special access—almost like a laboratory, where plants are subjected to experiments with an unknown purpose. During the presentation, what happens also affects the viewer, testing their sensitivity, patience, and endurance. <br>
           {: .paragraph-normal}
 
 
@@ -37,7 +38,6 @@ content_layout:
           Artistic supervision: Robert Sowa <br>
           Assistance in production: Jakub Ziółkowski 
           {: .paragraph-small}
-
         content_pl: |
           # Żywienie roślin
           ## Projekt dyplomowy stworzony w Pracownii Filmu Animowanego na Akademii Sztuk Pięknych w Krakowie, 2020. <br>

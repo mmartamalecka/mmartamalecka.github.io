@@ -32,7 +32,7 @@ content_layout:
           - uzupełnienie zasobów firmowych o szablony Word, PowerPoint
           - przygotowywanie materiałów do druku
           - przygotowywanie materiałów konferencyjnych, takich jak identyfikatory, ścianki, prezentacja, animacja na przerwy
-         <br> 
+          <br> 
           {: .paragraph-normal}
           ## **Założenia:**
           - unowocześnienie i zwiększenie wartości biznesowej

@@ -27,7 +27,7 @@ content_layout:
           
           {: .paragraph-normal}
 
-       content_en: |
+        content_en: |
           # Analytics for the Manager
           ## Intro for the Astrafox brand podcast
           

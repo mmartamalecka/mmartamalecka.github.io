@@ -5,7 +5,7 @@ published: true
 title_pl: "Letnie Tanie Kinobranie 2021"
 title_en: "Summer Cinema Festival 2021"
 description_pl: "Animacja i mapping na elewacji budynku Kina Pod Baranami"
-description_en: "Animation and mapping on the facade of the "Kino Pod Baranami" building"
+description_en: "Animation and mapping on the facade of the Kino Pod Baranami building"
 tags: animation mapping production
 thumbnail: "/video/kino/kino-short1.mp4"
 time_period:
