@@ -26,10 +26,7 @@
       </div> 
 
 
-      <div class="language-switch">
-        <button onclick="switchLanguage('en')">EN</button>
-        <button onclick="switchLanguage('pl')">PL</button>
-      </div>
+
       <nav class="navigation" aria-label="main navigation">
         <a href="javascript:void(0)" class="mobile-nav">Menu</a>
         <div class="mobile-nav-wrapper">
@@ -47,7 +44,12 @@
               <a{{ current }} itemprop="url" href="{{ link.url }}"><span itemprop="name">{{ link.title }}</span></a>
             </li>
           {% endfor %}
-          
+          <li class="language-switch button-en">
+            <a href="javascript:void(0)" onclick="switchLanguage('en')"><span>EN</span></a>
+          </li>
+          <li class="language-switch button-pl">
+            <a href="javascript:void(0)" onclick="switchLanguage('pl')"><span>PL</span></a>
+          </li>
           </ul>
         </div>
       </nav>
