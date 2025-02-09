@@ -26,8 +26,14 @@ priority: 0.9
             <img src="{{ project.thumbnail | prepend: site.image_serve_path }}" alt="{{ project.title }}" width="600" height="600">
           {% endif %}
           <p class="thumbnail-description">
-            <span class="project-title">{{ project.title }}</span>
-            <span class="project-description" >{{ project.description }}</span>
+            <span class="project-title">
+              <span class="lang-en">{{ project.title_en }}</span>
+              <span class="lang-pl">{{ project.title_pl }}</span>
+            </span>
+            <span class="project-description">
+              <span class="lang-en">{{ project.description_en }}</span>
+              <span class="lang-pl">{{ project.description_pl }}</span>
+            </span>
             <span class="project-tags">{{ project.tags | join: ' • '| replace: '+',' ' }}</span>
           </p>
         </div>
