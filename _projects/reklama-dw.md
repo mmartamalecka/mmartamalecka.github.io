@@ -31,7 +31,7 @@ content_layout:
           {: .paragraph-normal}
 
         content_en: |
-          # Data Wizards ddvertisement
+          # Data Wizards advertisement
           
           ## **Project scope:**
           - collaboration on the script
