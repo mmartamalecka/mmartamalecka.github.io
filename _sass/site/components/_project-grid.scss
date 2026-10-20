@@ -1,0 +1,92 @@
+$thumb-animation-time: $timing-interaction;
+$thumb-animation-ease: ease-in-out;
+
+.projects {
+  @extend .grid-container;
+
+  .project-listing {
+    @include grid-column(6);
+
+    @include grid-media(phablet) { @include grid-column(3); }
+    @include grid-media(tablet)  { @include grid-column(4); }
+  }
+}
+
+.project-listing {
+  .thumbnail-link {
+    display: block;
+    outline: 0;
+    text-decoration: none;
+  }
+
+  .thumbnail-description-wrapper {
+    display: block;
+    position: relative;
+    line-height: 1;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%;
+
+    img,
+    video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .8s var(--ease-out), filter $thumb-animation-time $thumb-animation-ease;
+    }
+
+    p.thumbnail-description {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      margin: 0;
+      padding: 1rem;
+      text-align: left;
+      line-height: 1;
+      background-color: rgba(var(--color-highlight-rgb), var(--color-rgb-opacity-tint-dark));
+      opacity: 0;
+      transition: opacity $thumb-animation-time $thumb-animation-ease;
+
+      span {
+        display: block;
+        color: white;
+        transform: translate3d(0, 10px, 0);
+        transition: transform $thumb-animation-time $thumb-animation-ease;
+
+        &.project-title {
+          font-size: 1.1em;
+          font-weight: 700;
+        }
+
+        &.project-description {
+          font-size: .7em;
+          padding-top: .5rem;
+        }
+
+        &.project-tags {
+          font-size: .7em;
+          padding-top: 2rem;
+        }
+      }
+    }
+  }
+
+  .thumbnail-link:hover,
+  .thumbnail-link:focus-visible {
+    .thumbnail-description-wrapper {
+      img,
+      video { transform: scale(1.04); }
+
+      p.thumbnail-description {
+        opacity: 1;
+
+        span { transform: translate3d(0, 0, 0); }
+      }
+    }
+  }
+}

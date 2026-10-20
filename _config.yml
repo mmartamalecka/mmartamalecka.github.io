@@ -14,7 +14,6 @@ exclude:
   - LICENSE
 
 include:
-  - _pages
   - _redirects
 
 # Site settings
@@ -56,29 +55,12 @@ compress_html: # http://jch.penibelst.de/
 
 
 # Structure
-navigation:
-  - title: HOME
-    url: /
-  - title: DESIGN
-    url: /projektowanie
-  - title: ANIMATION & VIDEO
-    url: /video
-  - title: ABOUT
-    url: /about
-
-permalink: /:title/
-
-# Configure site collections
+# The page is a single scrolling document. Sections come from _sections/*.md
+# (ordered by `order`), projects from _projects/*.md; both are rendered inline
+# by index.html and are not standalone pages.
 collections:
+  sections:
+    output: false
   projects:
-    output: true
-    permalink: /projects/:path/
-
-
-defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
+    output: false
 

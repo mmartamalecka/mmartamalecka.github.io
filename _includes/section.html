@@ -1,0 +1,71 @@
+{% assign s = include.section %}
+{% assign nav_sections = site.sections | sort: "order" %}
+{% if s.type == 'hero' %}
+<section class="section hero" id="{{ s.id }}" data-section aria-label="{{ s.title_en }}">
+  <div class="hero-content" data-hero>
+    <div class="hero-logo">
+      <video src="{{ s.video | prepend: site.image_serve_path }}" width="350" height="350" playsinline autoplay loop muted aria-hidden="true"></video>
+    </div>
+    <h1 class="hero-name">{{ s.title_en }}</h1>
+    <p class="hero-caption">
+      <span class="lang-en">{{ s.caption_en }}</span><span class="lang-pl">{{ s.caption_pl }}</span>
+    </p>
+  </div>
+</section>
+
+{% else %}
+<section class="section section-{{ s.type }}" id="{{ s.id }}" data-section>
+  <div class="section-header" data-reveal-group>
+    <p class="section-index title-label" data-reveal>{{ s.order | minus: 1 | prepend: '0' }}</p>
+    <h2 class="section-title">
+      <span class="section-title-inner">
+        <span class="lang-en">{{ s.title_en }}</span><span class="lang-pl">{{ s.title_pl }}</span>
+      </span>
+    </h2>
+    <span class="section-line" aria-hidden="true"></span>
+  </div>
+
+  {% if s.type == 'projects' %}
+  {% assign list = site.projects | where: "page", s.filter | sort: "priority" %}
+  <div class="projects">
+    {% for project in list %}
+    <article class="project-listing" data-reveal style="--i: {{ forloop.index0 | modulo: 3 }}">
+      <a class="thumbnail-link" href="#project-{{ project.slug }}" data-project="{{ project.slug }}">
+        <div class="thumbnail-description-wrapper">
+          {% if project.thumbnail contains '.webm' or project.thumbnail contains '.mp4' %}
+          <video src="{{ project.thumbnail | prepend: site.image_serve_path }}" width="400" height="400" playsinline loop muted preload="metadata" data-lazy-video aria-hidden="true"></video>
+          {% else %}
+          <img src="{{ project.thumbnail | prepend: site.image_serve_path }}" alt="" width="600" height="600" loading="lazy">
+          {% endif %}
+          <p class="thumbnail-description">
+            <span class="project-title">
+              <span class="lang-en">{{ project.title_en }}</span><span class="lang-pl">{{ project.title_pl }}</span>
+            </span>
+            <span class="project-description">
+              <span class="lang-en">{{ project.description_en }}</span><span class="lang-pl">{{ project.description_pl }}</span>
+            </span>
+            <span class="project-tags">{{ project.tags | split: ' ' | join: ' • ' | replace: '+', ' ' }}</span>
+          </p>
+        </div>
+        <span class="screenreader-only">{{ project.title_en }}</span>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
+
+  {% elsif s.type == 'about' %}
+  <div class="about grid-container">
+    <div class="about-photo" data-reveal>
+      <img src="{{ s.photo | prepend: site.image_serve_path }}" alt="Marta Małecka" loading="lazy">
+    </div>
+    <div class="about-text paragraph-large" data-reveal style="--i: 1">
+      <div class="lang-en">{{ s.text_en | markdownify }}</div>
+      <div class="lang-pl">{{ s.text_pl | markdownify }}</div>
+      <p class="about-contact">
+        <a class="button-secondary" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </p>
+    </div>
+  </div>
+  {% endif %}
+</section>
+{% endif %}

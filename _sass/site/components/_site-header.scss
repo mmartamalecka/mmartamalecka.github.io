@@ -1,0 +1,135 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+
+  // Background lives on a pseudo-element: backdrop-filter on the header itself
+  // would become the containing block of the fixed mobile menu.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(var(--color-secondary), .85);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity $timing-interaction ease-in-out;
+  }
+
+  &.is-scrolled::before,
+  &.menu-open::before {
+    opacity: 1;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--header-height);
+    margin: 0 var(--page-margin);
+  }
+
+  .brand {
+    color: var(--color-heading);
+    text-decoration: none;
+    font-size: rem(16px);
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity $timing-interaction ease-in-out;
+    pointer-events: none;
+  }
+
+  &.is-scrolled .brand {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.menu-toggle,
+.lang-toggle {
+  font: inherit;
+  font-size: var(--font-size-nav);
+  color: var(--color-heading);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: var(--font-letter-spacing-subtle);
+}
+
+.site-nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li { margin: 0; }
+
+  a,
+  .lang-toggle {
+    color: var(--color-heading);
+    text-decoration: none;
+    font-size: var(--font-size-nav);
+    text-transform: uppercase;
+    letter-spacing: var(--font-letter-spacing-subtle);
+    border-bottom: 1px solid transparent;
+    padding-bottom: .02em;
+    transition: border-color 100ms ease-in-out;
+
+    &:hover,
+    &:focus-visible,
+    &.current {
+      border-bottom-color: currentColor;
+      outline: 0;
+    }
+  }
+
+  // Mobile: full-screen overlay
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
+  padding: rem(32px) var(--page-margin);
+  background: rgba(var(--color-secondary), .95);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease-in-out, visibility 300ms;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  li {
+    padding: rem(10px) 0;
+    font-size: var(--font-size-xxlarge);
+  }
+
+  a, .lang-toggle { font-size: var(--font-size-xxlarge); }
+
+  @include grid-media(tablet) {
+    position: static;
+    height: auto;
+    padding: 0;
+    background: none;
+    opacity: 1;
+    visibility: visible;
+
+    ul { display: flex; align-items: center; }
+    li { padding: 0 0 0 1.5em; font-size: inherit; }
+    a, .lang-toggle { font-size: var(--font-size-nav); }
+  }
+}
+
+.menu-toggle {
+  @include grid-media(tablet) { display: none; }
+}

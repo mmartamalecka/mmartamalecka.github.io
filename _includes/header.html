@@ -1,60 +1,27 @@
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "{{ site.title }}",
-    "alternateName": "{{ site.long-title }}",
-    "url": "https://mmartamalecka.pl"
-  }
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "url": "https://mmartamalecka.pl",
-    "logo": "https://mmartamalecka.pl/images/favicons/apple-touch-icon.png"
-  }
-</script>
+{% assign nav_sections = site.sections | sort: "order" %}
+<header class="site-header" data-header>
+  <div class="header-inner">
+    <a class="brand" href="#home" data-nav-link aria-label="Marta Małecka">Marta Małecka</a>
 
-<header class="main-header sticky-header" data-header>
-  <div class="header-content">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      <span class="lang-en">Menu</span><span class="lang-pl">Menu</span>
+    </button>
 
-    <a class="accessibility-skip" href="#maincontent">Skip to main content</a>
-
-    <div class="logo-nav-wrapper">
-      <div class="logo-title-wrapper">
-
-        </div>
-      </div> 
-
-
-
-      <nav class="navigation" aria-label="main navigation">
-        <a href="javascript:void(0)" class="mobile-nav">Menu</a>
-        <div class="mobile-nav-wrapper">
-          <ul class="mobile-dropdown" itemscope itemtype="http://schema.org/SiteNavigationElement">
-          {% for link in site.navigation %}
-            {% assign current = nil %}
-            {% capture current_page %}{{ page.url | downcase | replace_first: '/', '' | remove: '/' }}{% if page.url == '/' %}projects{% endif %}{% endcapture %}
-            {% capture current_page_nav %}{{ link.title | downcase }}{% endcapture %}
-
-            {% if current_page contains current_page_nav %}
-              {% assign current = ' class="current"' %}
-            {% endif %}
-
-            <li>
-              <a{{ current }} itemprop="url" href="{{ link.url }}"><span itemprop="name">{{ link.title }}</span></a>
-            </li>
-          {% endfor %}
-          <li class="language-switch button-en">
-            <a href="javascript:void(0)" onclick="switchLanguage('en')"><span>EN</span></a>
-          </li>
-          <li class="language-switch button-pl">
-            <a href="javascript:void(0)" onclick="switchLanguage('pl')"><span>PL</span></a>
-          </li>
-          </ul>
-        </div>
-      </nav>
-
-    </div>
-
+    <nav class="site-nav" id="site-nav" aria-label="main navigation" data-nav>
+      <ul>
+        {% for s in nav_sections %}
+        <li>
+          <a href="#{{ s.id }}" data-nav-link>
+            <span class="lang-en">{{ s.nav_en }}</span><span class="lang-pl">{{ s.nav_pl }}</span>
+          </a>
+        </li>
+        {% endfor %}
+        <li>
+          <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language / Zmień język">
+            <span class="lang-en">PL</span><span class="lang-pl">EN</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>

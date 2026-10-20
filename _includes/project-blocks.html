@@ -1,0 +1,69 @@
+{% assign entry = include.entry %}
+{% assign alt = include.title %}
+<div class="layout layout-{{ entry.section_layout }}" data-reveal>
+  {% if entry.section_layout == 'text' %}
+  <section class="project-text">
+    <div class="project-text-wrapper paragraph-normal">
+      {{ entry.content | markdownify }}
+    </div>
+  </section>
+  {% elsif entry.columns %}
+  {% for column in entry.columns %}
+  {% case column.type %}
+  {% when 'image' %}
+  <figure class="image-wrapper {{ column.positioning }}">
+    <img class="{{ column.border }}" src="{{ column.url | prepend: site.image_serve_path }}" loading="lazy"
+      alt="{{ column.description | default: column.caption | default: alt | normalize_whitespace }}">
+    {% if column.caption %}<figcaption>{{ column.caption }}</figcaption>{% endif %}
+  </figure>
+  {% when 'video' %}
+  <div class="video-wrapper">
+    <video src="{{ column.url | prepend: site.image_serve_path }}" playsinline autoplay loop muted></video>
+  </div>
+  {% when 'video-play-once' %}
+  <div class="video-wrapper">
+    <video src="{{ column.url | prepend: site.image_serve_path }}" playsinline autoplay muted></video>
+  </div>
+  {% when 'text' %}
+  <div class="text-wrapper">
+    <div class="lang-en">{{ column.content_en | markdownify }}</div>
+    <div class="lang-pl">{{ column.content_pl | markdownify }}</div>
+  </div>
+  {% when 'image-gallery-rectangle', 'image-gallery-square', 'image-gallery-almost-square' %}
+  <div class="image-gallery {{ column.type }}" data-gallery
+       data-images='{{ column.images | jsonify }}'
+       data-image-serve-path="{{ site.image_serve_path }}">
+    <div class="gallery-container"></div>
+    <button class="gallery-nav prev" type="button" aria-label="Previous image">&#10094;</button>
+    <button class="gallery-nav next" type="button" aria-label="Next image">&#10095;</button>
+  </div>
+  {% when 'image-before-after' %}
+  <div class="image-comparison" data-comparison>
+    <img class="image-before" src="{{ column.before_url | prepend: site.image_serve_path }}" alt="Before" loading="lazy">
+    <img class="image-after" src="{{ column.after_url | prepend: site.image_serve_path }}" alt="After" loading="lazy">
+    {% include comparison-controls.html line='black' %}
+  </div>
+  {% when 'video-before-after' %}
+  <div class="image-comparison video-comparison" data-comparison>
+    <video class="image-before" src="{{ column.before_url | prepend: site.image_serve_path }}" loop muted playsinline></video>
+    <video class="image-after" src="{{ column.after_url | prepend: site.image_serve_path }}" loop muted playsinline></video>
+    {% include comparison-controls.html line='white' %}
+  </div>
+  {% when 'embedded-video' %}
+  <div class="video-wrapper embedded-video-container">
+    <iframe src="{{ column.url }}" title="Video player" frameborder="0" class="embedded-video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  {% endcase %}
+  {% endfor %}
+  {% else %}
+  {% for image in entry.images %}
+  <figure class="image-wrapper {{ image.positioning }}">
+    <img class="{{ image.border }}" src="{{ image.url | prepend: site.image_serve_path }}" loading="lazy"
+      alt="{{ image.description | default: image.caption | default: alt | normalize_whitespace }}">
+    {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+  </figure>
+  {% endfor %}
+  {% endif %}
+</div>

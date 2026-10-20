@@ -1,0 +1,27 @@
+---
+layout: default
+title_override: Marta Małecka
+description: Portfolio
+---
+{% assign sections = site.sections | sort: "order" %}
+{% for section in sections %}
+{% include section.html section=section %}
+{% endfor %}
+
+<dialog class="project-dialog" id="project-dialog" aria-label="Project">
+  <button class="dialog-close" type="button" data-dialog-close aria-label="Close">&times;</button>
+  <div class="project-wrapper dialog-content" data-dialog-content></div>
+</dialog>
+
+{% for project in site.projects %}
+<template id="tpl-{{ project.slug }}" data-section-id="{{ project.page }}">
+  {% if project.website.url %}
+  <header class="project-head">
+    <a href="{{ project.website.url }}" class="button-secondary">{{ project.website.button_text }}</a>
+  </header>
+  {% endif %}
+  {% for entry in project.content_layout %}
+  {% include project-blocks.html entry=entry title=project.title_en %}
+  {% endfor %}
+</template>
+{% endfor %}

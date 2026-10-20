@@ -10,31 +10,23 @@
 @import "site/base/media-queries";
 @import "site/base/variables";
 @import "site/base/grid";
-@import "site/base/extends";
 @import "site/base/utilities";
 @import "site/base/typography";
 @import "site/base/links";
 @import "site/base/images";
 @import "site/base/lists";
 @import "site/base/buttons";
-@import "site/base/forms";
 
-// Components
-@import "site/components/header";
-@import "site/components/nav";
-@import "site/components/page-title";
-@import "site/components/layouts";
-@import "site/components/footer";
-
-// // Layouts
+// Page
 @import "site/page";
 
-@import "site/layouts/projects";
-@import "site/layouts/project";
-@import "site/layouts/fonts";
-// @import "site/layouts/font";
-@import "site/layouts/about";
-@import "site/layouts/where-ive-been";
-@import "site/layouts/contact";
-@import "site/layouts/message";
-@import "site/layouts/m"
+// Components
+@import "site/components/site-header";
+@import "site/components/section";
+@import "site/components/hero";
+@import "site/components/reveal";
+@import "site/components/project-grid";
+@import "site/components/about";
+@import "site/components/dialog";
+@import "site/components/project-layouts";
+@import "site/components/project-content";

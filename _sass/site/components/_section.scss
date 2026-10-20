@@ -1,0 +1,54 @@
+.section {
+  position: relative;
+  padding: rem(96px) 0 rem(48px);
+  scroll-margin-top: 0;
+
+  @include grid-media(desktop) {
+    padding: rem(160px) 0 rem(64px);
+  }
+}
+
+.section-header {
+  margin: 0 var(--page-margin) rem(40px);
+
+  @include grid-media(desktop) {
+    margin-bottom: rem(72px);
+  }
+
+  .section-index { margin-bottom: rem(8px); }
+}
+
+.section-title {
+  font-family: $font-family-secondary;
+  font-size: var(--font-size-level-jumbo);
+  line-height: var(--line-height-tiny);
+  font-weight: 400;
+  padding: 0;
+  overflow: hidden;
+
+  .section-title-inner {
+    display: block;
+    padding-bottom: .1em;
+    transition: transform 1s var(--ease-out);
+  }
+}
+
+.section-line {
+  display: block;
+  height: 1px;
+  margin-top: rem(16px);
+  background: var(--color-line);
+  transform-origin: left center;
+  transition: transform 1.2s var(--ease-out) .2s;
+}
+
+// Animated state only applies when JS is running
+.js {
+  .section-title-inner { transform: translateY(110%); }
+  .section-line { transform: scaleX(0); }
+
+  .section-header.is-visible {
+    .section-title-inner { transform: none; }
+    .section-line { transform: scaleX(1); }
+  }
+}

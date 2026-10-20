@@ -1,0 +1,36 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  height: 50svh;
+  padding: rem(48px) 0 0;
+
+  .hero-content {
+    --hero-progress: 0;
+    text-align: center;
+    transform: translate3d(0, calc(var(--hero-progress) * 80px), 0);
+    opacity: calc(1 - var(--hero-progress));
+    will-change: transform, opacity;
+  }
+
+  .hero-logo video {
+    width: min(350px, 26vh, 70vw);
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .hero-name {
+    padding: rem(12px) 0 rem(4px);
+    font-size: rem(20px);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .hero-caption {
+    color: var(--color-heading);
+    font-size: rem(14px);
+    text-transform: uppercase;
+    letter-spacing: .07em;
+  }
+}

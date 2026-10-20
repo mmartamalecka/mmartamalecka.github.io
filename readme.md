@@ -39,6 +39,15 @@ This site runs on Jekyll, an opensource static site generating platform.
 - Go to http://localhost:4000/ in your browser
 
 
+## Structure
+
+The site is a single scrolling page (`index.html`) on Jekyll, deployed to GitHub Pages by `.github/workflows/jekyll.yml`.
+
+- `_sections/*.md` – page sections, in `order`. Each one gets a nav button that scrolls to it. `type` is `hero`, `projects` (shows projects whose `page` equals `filter`) or `about`. Texts are `*_en` / `*_pl`.
+- `_projects/*.md` – projects, opened in an overlay (deep link: `/#project-<file-name>`). Set `page: design|video`, `priority`, `published`.
+- `_sass/` – styles; colors, fonts and motion settings are CSS variables in `_sass/site/base/_variables.scss`.
+- `assets/js/site.js` – scroll reveal, scroll-spy menu, language switch, project overlay.
+
 ## Licenses
 
 ### Underlying source code
