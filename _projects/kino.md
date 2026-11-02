@@ -1,7 +1,7 @@
 ---
 date: 2023-06-15
 priority: 5
-published: true
+published: false
 title_pl: "Letnie Tanie Kinobranie 2021"
 title_en: "Summer Cinema Festival 2021"
 description_pl: "Animacja i mapping na elewacji budynku Kina Pod Baranami"

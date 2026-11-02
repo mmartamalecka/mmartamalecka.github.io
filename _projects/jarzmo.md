@@ -1,7 +1,7 @@
 ---
 date: 2023-06-15
 priority: 3
-published: true
+published: false
 title_pl: "Jarzmo - Bat Trip"
 title_en: "Jarzmo - Bat Trip"
 description_pl: "Mapping animacji w jaskini, teledysk, grafika"

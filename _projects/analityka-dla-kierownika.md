@@ -1,7 +1,7 @@
 ---
 date: 2023-06-15
 priority: 2
-published: true
+published: false
 title_pl: "Analityka dla kierownika"
 title_en: "Analytics for the Manager"
 description_pl: "Animacja intro podcastu"

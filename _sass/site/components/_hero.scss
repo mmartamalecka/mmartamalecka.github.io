@@ -1,0 +1,39 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50vh;
+  height: 50svh;
+  padding: rem(24px) var(--page-margin);
+
+  .hero-content {
+    --hero-progress: 0;
+    flex: 1;
+    text-align: left;
+    transform: translate3d(0, calc(var(--hero-progress) * 80px), 0);
+    opacity: calc(1 - var(--hero-progress));
+    will-change: transform, opacity;
+  }
+
+  .hero-logo video {
+    width: min(350px, 26vh, 70vw);
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .hero-name {
+    padding: rem(4px) 0 0;
+    font-family: $font-family-secondary;
+    font-size: var(--font-size-level-jumbo);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .hero-caption {
+    color: var(--color-heading);
+    font-size: var(--font-size-level-3);
+    font-family: $font-family-primary;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+  }
+}

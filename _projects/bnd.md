@@ -1,7 +1,7 @@
 ---
 date: 2023-07-01
 published: true
-priority: 6
+priority: 14
 title_pl: "Biznes Napędzany Danymi"
 title_en: "Data-Driven Business"
 description_pl: Podcast wydawany przez markę Data Wizards

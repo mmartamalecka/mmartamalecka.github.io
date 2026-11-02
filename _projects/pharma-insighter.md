@@ -1,7 +1,7 @@
 ---
 date: 2023-06-15
 published: true
-priority: 7
+priority: 55
 title_pl: "Pharma Insighter"
 title_en: "Pharma Insighter"
 description_pl: "szata graficzna dla rozwiązania marki Data Wizards"

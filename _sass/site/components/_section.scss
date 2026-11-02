@@ -1,0 +1,61 @@
+.section {
+  position: relative;
+  padding: 0 0 rem(48px);
+  scroll-margin-top: 0;
+
+  @include grid-media(desktop) {
+    padding: 0 0 rem(64px);
+  }
+}
+
+// Title sits on a violet-to-black bar. A second, black copy of the title is
+// clipped to the bar's revealed area, so the text inverts wherever the bar overlaps it.
+.section-header {
+  position: relative;
+  margin: 0 var(--page-margin) rem(40px);
+
+  @include grid-media(desktop) {
+    margin-bottom: rem(72px);
+  }
+}
+
+.section-bar {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--color-heading), #000);
+}
+
+.section-title {
+  position: relative;
+  font-family: $font-family-secondary;
+  font-size: var(--font-size-level-2);
+  line-height: var(--line-height-tiny);
+  font-weight: 400;
+  padding: .12em rem(16px);
+  overflow: hidden;
+
+  .section-title-inner {
+    display: block;
+  }
+
+  &.section-title--inverted {
+    position: absolute;
+    inset: 0;
+    color: #000;
+    pointer-events: none;
+  }
+}
+
+// Scroll-linked: JS sets --tp (0..1) on the header
+.js {
+  .section-title-inner {
+    transform: translate3d(calc((1 - var(--tp, 0)) * 100%), 0, 0);
+    opacity: var(--tp, 0);
+    will-change: transform;
+  }
+
+  .section-bar,
+  .section-title--inverted {
+    clip-path: inset(0 calc((1 - var(--tp, 0)) * 100%) 0 0);
+  }
+}

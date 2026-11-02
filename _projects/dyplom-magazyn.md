@@ -1,6 +1,6 @@
 ---
 date: 2023-07-01
-published: true
+published: false
 priority: 9
 title_pl: "Magisterska praca teoretyczna"
 title_en: "Master's thesis (theoretical work)"

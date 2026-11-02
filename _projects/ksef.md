@@ -1,7 +1,7 @@
 ---
 date: 2023-06-15
 priority: 4
-published: true
+published: false
 title_pl: "Jak działa KSeF Connector?"
 title_en: "How does the KSeF Connector work?"
 description_pl: "Animacja"

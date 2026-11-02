@@ -1,7 +1,7 @@
 ---
 date: 2023-06-15
 priority: 7
-published: true
+published: false
 title_pl: "Data Wizards"
 title_en: "Data Wizards"
 description_pl: "Reklama marki"

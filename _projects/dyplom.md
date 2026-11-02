@@ -1,7 +1,7 @@
 ---
 date: 2023-06-15
 priority: 1
-published: true
+published: false
 title_pl: "Żywienie roślin"
 title_en: "Nourishing Plants"
 description_pl: "Pokaz audiowizualny, praca magisterska"

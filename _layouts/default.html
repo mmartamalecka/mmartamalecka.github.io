@@ -2,19 +2,15 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="en" class="{% if page.html_class %}{{ page.html_class }}{% endif %}">
+<html lang="en" class="no-js">
 {% include head.html %}
-<body class="{% if page.accent %}{% include accent.html %}{% endif %}">
-  <div class="global-wrapper">
-    {% include header.html %}
-    <main class="main-content {% if page.class %}{{ page.class }}{% endif %}" id="maincontent">
-      {% include page-title.html %}
-
-      {{ content }}
-    </main>
-    {% include footer.html %}
-    {% include scripts.html %}
-    
-  </div>
+<body>
+  <a class="skip-link" href="#maincontent">Skip to main content</a>
+  {% include header.html %}
+  <main id="maincontent">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/site.js' | prepend: site.baseurl }}" defer></script>
 </body>
 </html>

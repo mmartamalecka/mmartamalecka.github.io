@@ -1,6 +1,6 @@
 ---
 date: 2023-07-01
-published: true
+published: false
 priority: 4
 title_pl: "New Gothic"
 title_en: "New Gothic"

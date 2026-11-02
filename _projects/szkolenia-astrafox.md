@@ -1,7 +1,7 @@
 ---
 date: 2023-06-15
 priority: 10
-published: true
+published: false
 title_pl: "Center of Excellence"
 title_en: "Center of Excellence"
 description_pl: "Video promujące ofertę szkoleniową"

@@ -1,0 +1,102 @@
+.project-dialog {
+  // Content inside the panel uses a narrower page margin than the full page
+  --page-margin: #{rem(16px)};
+
+  --close-size: #{rem(44px)};
+  --close-inset: #{rem(12px)};
+
+  width: 85vw;
+  max-width: none;
+  max-height: 80vh;
+  max-height: 80svh; // svh: stays fixed when the mobile address bar shows/hides
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--color-line-subtle);
+  color: var(--color-text);
+  background: var(--color-background);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  @include grid-media(tablet) { --page-margin: #{rem(40px)}; }
+
+  &[open] {
+    animation: dialog-in .5s var(--ease-out);
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, .8);
+  }
+
+  // The dialog itself is focused on open (see site.js), so it must not show a ring
+  &:focus { outline: 0; }
+
+  // Sticky, but takes no layout space: the negative bottom margin cancels its own box
+  .dialog-close {
+    position: sticky;
+    top: var(--close-inset);
+    z-index: 10;
+    display: block;
+    width: var(--close-size);
+    height: var(--close-size);
+    margin: var(--close-inset) var(--close-inset) calc(-1 * (var(--close-size) + var(--close-inset))) auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    color: var(--color-heading);
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
+    // Fat X drawn from two bars, so it is exactly centered in the hit area
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      height: rem(5px);
+      border-radius: rem(2px);
+      background: currentColor;
+    }
+
+    &::before { transform: translate(-50%, -50%) rotate(45deg); }
+    &::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+    &:focus { outline: 0; }
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: -2px;
+    }
+  }
+
+  .dialog-content {
+    // Clears the close button at the top of the scroll
+    padding: calc(var(--close-size) + 2 * var(--close-inset)) 0 var(--gutter-row);
+    transition: opacity .6s var(--ease-out);
+
+    &.is-loading { opacity: 0; transition: none; }
+  }
+
+  .project-wrapper > .layout:last-child {
+    padding-bottom: 0;
+  }
+
+  .project-head {
+    @extend .grid-container;
+    margin-bottom: var(--gutter-row);
+
+    .button-secondary {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
+  }
+}
+
+@keyframes dialog-in {
+  from { opacity: 0; transform: translate3d(0, 40px, 0); }
+  to   { opacity: 1; transform: none; }
+}

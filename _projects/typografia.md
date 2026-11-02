@@ -1,7 +1,7 @@
 ---
 date: 2023-07-01
 published: true
-priority: 7
+priority: 10
 title_pl: "Typografia"
 title_en: "Typography"
 description_pl: Katalog o polskiej typografii

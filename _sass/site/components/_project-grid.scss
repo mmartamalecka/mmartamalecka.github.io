@@ -1,0 +1,154 @@
+$thumb-animation-time: $timing-interaction;
+$thumb-animation-ease: ease-in-out;
+
+.projects {
+  @extend .grid-container;
+  grid-template-columns: minmax(0, 1fr);
+  grid-column-gap: rem(3px);
+  grid-row-gap: rem(3px);
+
+  @include grid-media(tablet) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: calc((100vw - 2 * var(--page-margin) - 2 * var(--gutter)) / 3);
+    grid-column-gap: var(--gutter);
+    grid-row-gap: var(--gutter-row);
+  }
+
+  // Single column on mobile, 3 tiles per row from tablet up
+  .project-listing {
+    grid-column: span 1;
+
+    @include grid-media(tablet) {
+      &.project-listing--horizontal { grid-column: span 2; }
+      &.project-listing--vertical { grid-row: span 2; }
+    }
+  }
+}
+
+.project-listing {
+  .thumbnail-link {
+    display: block;
+    height: 100%;
+    outline: 0;
+    text-decoration: none;
+  }
+
+  .thumbnail-description-wrapper {
+    display: block;
+    position: relative;
+    line-height: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding-top: 100%;
+
+    @include grid-media(tablet) {
+      padding-top: 0;
+    }
+
+    img,
+    video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .8s var(--ease-out), filter $thumb-animation-time $thumb-animation-ease;
+    }
+
+    p.thumbnail-description {
+      display: none;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      margin: 0;
+      padding: 1rem;
+      text-align: left;
+      line-height: 1;
+      background-color: rgba(var(--color-highlight-rgb), var(--color-rgb-opacity-tint-dark));
+      opacity: 0;
+      transition: opacity $thumb-animation-time $thumb-animation-ease;
+
+      span {
+        display: block;
+        color: white;
+        transform: translate3d(0, 10px, 0);
+        transition: transform $thumb-animation-time $thumb-animation-ease;
+
+        &.project-title {
+          font-size: 1.1em;
+          font-weight: 700;
+        }
+
+        &.project-description {
+          font-size: .7em;
+          padding-top: .5rem;
+        }
+
+        &.project-tags {
+          font-size: .7em;
+          padding-top: 2rem;
+        }
+      }
+    }
+  }
+
+  // Mobile: horizontal thumbnails fit the full width at their natural ratio instead of a square crop
+  @media only screen and (max-width: 767px) {
+    &.project-listing--horizontal .thumbnail-description-wrapper {
+      height: auto;
+      padding-top: 0;
+
+      img,
+      video {
+        position: static;
+        height: auto;
+      }
+    }
+  }
+
+  // Mouse/keyboard only; on mobile the overlay is driven by scroll (.is-active)
+  @media (hover: hover) and (min-width: 768px) {
+    .thumbnail-link:hover,
+    .thumbnail-link:focus-visible {
+      .thumbnail-description-wrapper {
+        img,
+        video { transform: scale(1.04); }
+
+        p.thumbnail-description {
+          opacity: 1;
+
+          span { transform: translate3d(0, 0, 0); }
+        }
+      }
+    }
+  }
+}
+
+// On mobile the overlay is shown by JS (.is-active) based on scroll position
+.project-listing.is-active .thumbnail-description-wrapper {
+  img,
+  video { transform: scale(1.04); }
+
+  p.thumbnail-description {
+    opacity: 1;
+
+    span { transform: translate3d(0, 0, 0); }
+  }
+}
+
+// Never show native video controls / start overlay, and ignore taps so iOS can't open fullscreen
+video {
+  pointer-events: none;
+  -webkit-touch-callout: none;
+}
+
+// Separate rules: one unsupported pseudo-element would invalidate a grouped selector
+video::-webkit-media-controls { display: none !important; }
+video::-webkit-media-controls-panel { display: none !important; }
+video::-webkit-media-controls-start-playback-button { display: none !important; }
+video::-webkit-media-controls-overlay-play-button { display: none !important; }
+video::-webkit-media-controls-enclosure { display: none !important; }

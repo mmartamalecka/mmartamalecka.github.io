@@ -1,13 +1,14 @@
 ---
 date: 2023-07-01
 published: true
-priority: 8
+priority: 7
 title_pl: "Teatr STU - Konkurs na piosenkę o Krakowie"
 title_en: "STU Theatre - Song contest about Cracow"
 description_pl: Identyfikacja wizualna drugiej edycji konkursu
 description_en: Visual identity for the second edition of the contest.
 tags: digital+ads printed+posters
-thumbnail: \design\konkurs-piosenki\konkurs-okladka.png
+thumbnail: \2026\konkurs.webp
+thumbnail_aspect: horizontal
 time_period: 
 page: design
 

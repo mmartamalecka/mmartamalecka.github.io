@@ -1,0 +1,22 @@
+.about {
+  .about-photo {
+    grid-row: 1;
+    @include grid-column-from-to(1, 4);
+
+    @include grid-media(tablet) { @include grid-column-from-to(9, 12); }
+
+    img { width: 100%; }
+  }
+
+  .about-text {
+    grid-row: 2;
+    @include grid-column-from-to(1, 6);
+
+    @include grid-media(tablet) {
+      grid-row: 1;
+      @include grid-column-from-to(1, 7);
+    }
+  }
+
+  .about-contact { margin-top: rem(24px); }
+}
