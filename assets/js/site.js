@@ -10,7 +10,7 @@
     root.lang = lang;
     try { localStorage.setItem('preferredLanguage', lang); } catch (e) { /* storage unavailable */ }
   }
-  root.lang = root.dataset.lang || 'en';
+  root.lang = root.dataset.lang || 'pl';
 
   doc.querySelector('[data-lang-toggle]').addEventListener('click', function () {
     setLang(root.dataset.lang === 'en' ? 'pl' : 'en');

@@ -4,7 +4,7 @@ id: design
 type: projects
 filter: design
 nav_en: DESIGN
-nav_pl: PROJEKTOWANIE
+nav_pl: DESIGN
 title_en: Design
-title_pl: Projektowanie graficzne
+title_pl: Design
 ---
